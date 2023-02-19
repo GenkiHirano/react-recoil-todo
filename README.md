@@ -1,1 +1,3 @@
-# recoil-todo
+## 概要
+
+- recoil ライブラリで、todo アプリを実装して遊んでみる。
