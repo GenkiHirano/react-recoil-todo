@@ -6,6 +6,12 @@ export const todoListStatsState = selector({
   get: ({ get }) => {
     const todoList = get(todoListState);
     const totalNum = todoList.length;
-    return totalNum;
+    const totalCompletedNum = todoList.filter((item) => item.isComplete).length;
+    const totalUncompletedNum = totalNum - totalCompletedNum;
+    return {
+      totalNum,
+      totalCompletedNum,
+      totalUncompletedNum,
+    };
   },
 });
